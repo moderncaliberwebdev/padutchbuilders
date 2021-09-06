@@ -1,0 +1,153 @@
+.home {
+
+}
+
+.home__logo {
+    width: 8rem;
+    margin-top: -3rem;
+}
+
+.home__nav {
+    background-color: #D12F34;
+    width: 100vw;
+    margin: 2rem 0 0 -5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.home__nav span {
+    float: left;
+    margin: 1.5rem 2rem;
+    font-size: 1.2rem;
+}
+
+.home__nav span a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.home__banner {
+    width: 100vw;
+    margin-left: -5rem;
+}
+
+.home__hat-container {
+    background-color: #fff;
+    width: 100vw;
+    margin-left: -5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hat {
+    width: 15rem;
+    margin: 1rem 3rem;
+}
+
+.showcase__title {
+    color: #444F66;
+    font-weight: 200;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}
+
+.home__showcase {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.showcase__product-list {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    color: #444F66;
+    border-right: 1px solid #444F66;
+}
+
+.showcase__list-item {
+    padding: 1rem .5rem 1rem 2rem;
+    cursor: pointer;
+}
+
+.showcase__list-item:hover {
+    background-color: #444F66;
+    color: #fff;
+}
+
+.home__services {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.services__servicebox {
+    background-color: #fff;
+    color: #444F66;
+    padding: 2rem;
+    width: 20rem;
+    height: 15rem;
+}
+
+.servicebox__img {
+    width: 5rem;
+}
+
+.servicebox__title {
+    font-size: 1.5rem;
+}
+
+.interested__cont {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #444F66;
+}
+
+.interested__title {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.interested__info {
+    margin-top: .75rem;
+    font-size: 1rem;
+}
+
+.interested__contact {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.interested__number {
+    margin-right: .5rem;
+    cursor: pointer;
+    color: #D12F34;
+    font-size: 1.2rem;
+}
+
+.interested__or {
+    margin-right: .5rem;
+    font-size: 1.2rem;
+}
+
+.interested__email {
+    cursor: pointer;
+    color: #D12F34;
+    font-size: 1.2rem;
+}

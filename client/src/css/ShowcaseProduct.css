@@ -1,0 +1,48 @@
+.showcaseproduct {
+   margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    color: #444F66;
+    text-align: center;
+}
+.showcaseproduct__img-cont {
+    width: 25rem;
+}
+
+.showcaseproduct__img {
+    width: 100%;
+    height: auto;
+}
+
+.showcaseproduct__info-cont {
+    margin-left: 1rem;
+    align-self: center;
+}
+
+.info__title {
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.info__price {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.info__interested {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.info__sales {
+    color: #fff;
+    background-color: #D12F34;
+    padding: .75rem 1.5rem;
+    border-style: none;
+    font-size: 1.6rem;
+}
+
+.showcaseproduct__readmore {
+    float: left;
+    cursor: pointer;
+}

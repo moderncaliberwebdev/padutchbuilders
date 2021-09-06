@@ -1,27 +1,30 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import 'regenerator-runtime/runtime.js'
 
 import '../css/App.css'
 
-import { actions } from '../store'
+// import { actions } from '../store'
+import Home from '../Pages/Home'
 
 function App() {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
-  const action = useSelector((state) => state.action)
-  const { title } = action
+  // const action = useSelector((state) => state.action)
+  // const { title } = action
 
-  useEffect(() => {
-    dispatch(actions())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(actions())
+  // }, [dispatch])
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src='/public/images/react.png' />
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' component={Home} exact />
+      </Switch>
+    </Router>
   )
 }
 

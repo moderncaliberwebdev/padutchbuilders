@@ -1,9 +1,21 @@
-h1 {
-  color: #a1a1a1;
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-img {
-  width: 40vw;
-  margin: 0 30vw;
+html {
+  /* root font size is 16px so 62.5% is 10px */
+  height: 100%;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem 5rem 0 5rem;
+  min-height: 100%;
+  background-color: #F6F6F6;
 }
