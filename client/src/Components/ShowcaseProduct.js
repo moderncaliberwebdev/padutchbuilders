@@ -2,9 +2,12 @@ import React from 'react'
 
 import '../css/ShowcaseProduct.css'
 
-function ShowcaseProduct({ image, title, price }) {
+function ShowcaseProduct({ image, title, price, show }) {
   return (
-    <div className='showcaseproduct'>
+    <div
+      className='showcaseproduct'
+      style={{ display: show ? 'flex' : 'none' }}
+    >
       <div className='showcaseproduct__img-cont'>
         <img
           className='showcaseproduct__img'
@@ -15,7 +18,12 @@ function ShowcaseProduct({ image, title, price }) {
       </div>
       <div className='showcaseproduct__info-cont'>
         <h3 className='info__title'>{title}</h3>
-        <p className='info__price'>{price}</p>
+        <p
+          className='info__price'
+          style={{ display: price ? 'block' : 'none' }}
+        >
+          {price}
+        </p>
         <p className='info__interested'>Interested?</p>
         <button className='info__sales'>Email Sales</button>
       </div>

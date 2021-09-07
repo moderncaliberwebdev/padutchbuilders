@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import '../css/Home.css'
 
@@ -6,6 +6,47 @@ import ShowcaseProduct from '../Components/ShowcaseProduct'
 import Footer from '../Components/Footer'
 
 function Home() {
+  const [showcase, setShowcase] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ])
+
+  const [currentShowcase, setCurrentShowcase] = useState('')
+
+  const changeCarousel = (item) => {
+    const showcaseElements = [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ]
+    showcaseElements[item] = true
+    setShowcase(showcaseElements)
+    setCurrentShowcase(item)
+  }
+
+  useEffect(() => {
+    changeCarousel(0)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (currentShowcase != 7) {
+        changeCarousel(currentShowcase + 1)
+      } else changeCarousel(0)
+    }, 8000)
+  })
+
   return (
     <div className='home'>
       <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
@@ -47,27 +88,132 @@ function Home() {
       <h2 className='showcase__title'>Featured Showcase</h2>
       <div className='home__showcase'>
         <div className='showcase__product-list'>
-          <span className='showcase__list-item'>
+          <span
+            className='showcase__list-item item0'
+            onClick={() => changeCarousel(0)}
+            style={{
+              backgroundColor: currentShowcase == 0 && '#444F66',
+              color: currentShowcase == 0 && '#fff',
+            }}
+          >
             4x4 Monster Truck with Slide
           </span>
-          <span className='showcase__list-item'>
+          <span
+            className='showcase__list-item item1'
+            onClick={() => changeCarousel(1)}
+            style={{
+              backgroundColor: currentShowcase == 1 && '#444F66',
+              color: currentShowcase == 1 && '#fff',
+            }}
+          >
             Goat Barn and Chicken Coop
           </span>
-          <span className='showcase__list-item'>4x6 Quaker Chicken Coop</span>
-          <span className='showcase__list-item'>4x6 Chicken Coop</span>
-          <span className='showcase__list-item'>
+          <span
+            className='showcase__list-item item2'
+            onClick={() => changeCarousel(2)}
+            style={{
+              backgroundColor: currentShowcase == 2 && '#444F66',
+              color: currentShowcase == 2 && '#fff',
+            }}
+          >
+            4x6 Quaker Chicken Coop
+          </span>
+          <span
+            className='showcase__list-item item3'
+            onClick={() => changeCarousel(3)}
+            style={{
+              backgroundColor: currentShowcase == 3 && '#444F66',
+              color: currentShowcase == 3 && '#fff',
+            }}
+          >
+            4x6 Chicken Coop
+          </span>
+          <span
+            className='showcase__list-item item4'
+            onClick={() => changeCarousel(4)}
+            style={{
+              backgroundColor: currentShowcase == 4 && '#444F66',
+              color: currentShowcase == 4 && '#fff',
+            }}
+          >
             Chicken Barn Wagon on Wheels
           </span>
-          <span className='showcase__list-item'>Self Dumping Hoppers</span>
-          <span className='showcase__list-item'>
+          <span
+            className='showcase__list-item item5'
+            onClick={() => changeCarousel(5)}
+            style={{
+              backgroundColor: currentShowcase == 5 && '#444F66',
+              color: currentShowcase == 5 && '#fff',
+            }}
+          >
+            Self Dumping Hoppers
+          </span>
+          <span
+            className='showcase__list-item item6'
+            onClick={() => changeCarousel(6)}
+            style={{
+              backgroundColor: currentShowcase == 6 && '#444F66',
+              color: currentShowcase == 6 && '#fff',
+            }}
+          >
             Chicken Barn House on Wheels
           </span>
-          <span className='showcase__list-item'>Happy Hideout Swingset</span>
+          <span
+            className='showcase__list-item item7'
+            onClick={() => changeCarousel(7)}
+            style={{
+              backgroundColor: currentShowcase == 7 && '#444F66',
+              color: currentShowcase == 7 && '#fff',
+            }}
+          >
+            Happy Hideout Swingset
+          </span>
         </div>
         <ShowcaseProduct
           image='/public/images/QHWMonsterT175.png'
           title='4x4 Monster Truck with Slide'
           price='$2,100.00 Plus S&H'
+          show={showcase[0]}
+        />
+        <ShowcaseProduct
+          image='/public/images/SCCGC175.png'
+          title='Goat Barn and Chicken Coop'
+          show={showcase[1]}
+        />
+        <ShowcaseProduct
+          image='/public/images/SCC5175.png'
+          title='4x6 Quaker Chicken Coop'
+          price='$1,495.00 Plus S&H '
+          show={showcase[2]}
+        />
+        <ShowcaseProduct
+          image='/public/images/ChickenCoopPenRedo175.png'
+          title='4x6 Chicken Coop'
+          price='$1094.99 Plus S&H'
+          show={showcase[3]}
+        />
+        <ShowcaseProduct
+          image='/public/images/PBChickBarn812175.png'
+          title='Chicken Barn Wagon on Wheels'
+          price='$4,595.99 Plus S&H '
+          show={showcase[4]}
+        />
+        <ShowcaseProduct
+          image='/public/images/CWHoppers2175.png'
+          title='Self Dumping Hoppers'
+          show={showcase[5]}
+        />
+        <ShowcaseProduct
+          image='/public/images/ChickenWagononwheels175.png'
+          title='Chicken Barn House on Wheels'
+          price='$4,795.99 Plus S&H '
+          show={showcase[6]}
+        />
+        <ShowcaseProduct
+          image='/public/images/happyhideout1751.png'
+          title='Happy Hideout Swingset'
+          price='$4,000.00'
+          show={showcase[7]}
         />
       </div>
       <div className='home__services'>
