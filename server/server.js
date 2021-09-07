@@ -3,7 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 
 // DB
-import connectDB from './config/db.js'
+// import connectDB from './config/db.js'
 
 // Routes
 import routes from './routes/router.js'
@@ -16,5 +16,13 @@ dotenv.config()
 connectDB()
 
 app.use('/api', routes)
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/client/dist')))
+
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+  )
+}
 
 app.listen(PORT, () => console.log('Server is running on port ', PORT))
