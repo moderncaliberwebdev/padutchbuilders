@@ -46,6 +46,12 @@
 .hat {
     width: 15rem;
     margin: 1rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.hat:hover {
+    transform: scale(1.1);
 }
 
 .showcase__title {
@@ -96,6 +102,12 @@
     padding: 2rem;
     width: 20rem;
     height: 15rem;
+    transition: all .2s;
+}
+
+.services__servicebox:hover {
+    transform: scale(1.1);
+    border-bottom: 5px solid #D12F34;
 }
 
 .servicebox__img {
