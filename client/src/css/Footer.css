@@ -1,0 +1,21 @@
+.footer {
+ background-color: #444F66;
+ margin-left: -5rem;
+ width: 100vw;
+ padding: 4rem;
+ text-align: center;
+ font-size: 1.4rem;
+ color: #fff;
+}
+
+.footer__text {
+    margin: .5rem;
+    display: inline-block;
+}
+
+.footer__r {
+    width: .5rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 .3rem 0 .1rem;
+}

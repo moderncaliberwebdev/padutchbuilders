@@ -151,3 +151,39 @@
     color: #D12F34;
     font-size: 1.2rem;
 }
+
+.home__aboutamish {
+    margin-top: 5rem;
+    background-color: #fff;
+    padding: 2rem;
+    color: #444F66;
+}
+
+.aboutamish__title {
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+.aboutamish__subtitle {
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #444F66;
+    color: #fff;
+    width: 100%;
+}
+
+.aboutamish__para {
+ margin: 2rem 0;
+ font-size: 1.2rem;
+ line-height: 1.5rem;
+}
+
+.aboutamish__banner {
+ width: 100%;
+}
+
+.aboutamish__cta {
+    margin-top: 1.5rem;   
+   font-size: 1.6rem;
+}
