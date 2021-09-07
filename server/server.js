@@ -1,6 +1,7 @@
 // Imports
 import express from 'express'
 import dotenv from 'dotenv'
+import path from 'path'
 
 // DB
 // import connectDB from './config/db.js'
@@ -13,9 +14,11 @@ const app = express()
 const PORT = process.env.PORT || 3000
 app.use(express.json())
 dotenv.config()
-connectDB()
+// connectDB()
 
 app.use('/api', routes)
+
+const __dirname = path.resolve()
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/dist')))
