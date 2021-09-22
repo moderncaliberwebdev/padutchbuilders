@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import '../css/Home.css'
 
@@ -6,6 +6,26 @@ import ShowcaseProduct from '../Components/ShowcaseProduct'
 import Footer from '../Components/Footer'
 
 function Home() {
+  function useInterval(callback, delay) {
+    const savedCallback = useRef()
+
+    // Remember the latest callback.
+    useEffect(() => {
+      savedCallback.current = callback
+    }, [callback])
+
+    // Set up the interval.
+    useEffect(() => {
+      function tick() {
+        savedCallback.current()
+      }
+      if (delay !== null) {
+        let id = setInterval(tick, delay)
+        return () => clearInterval(id)
+      }
+    }, [delay])
+  }
+
   const [showcase, setShowcase] = useState([
     false,
     false,
@@ -17,9 +37,11 @@ function Home() {
     false,
   ])
 
-  const [currentShowcase, setCurrentShowcase] = useState('')
+  const [currentShowcase, setCurrentShowcase] = useState(0)
 
   const changeCarousel = (item) => {
+    console.log(item)
+    console.log('carousel')
     const showcaseElements = [
       false,
       false,
@@ -31,21 +53,24 @@ function Home() {
       false,
     ]
     showcaseElements[item] = true
+    // console.log(item)
+    // console.log(showcaseElements)
     setShowcase(showcaseElements)
-    setCurrentShowcase(item)
+    setCurrentShowcase(Number(item))
   }
 
   useEffect(() => {
     changeCarousel(0)
   }, [])
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (currentShowcase != 7) {
-        changeCarousel(currentShowcase + 1)
-      } else changeCarousel(0)
-    }, 8000)
-  })
+  useInterval(() => {
+    const showcaseElements = showcase
+    const currentItem = showcaseElements.indexOf(true) + 1
+    console.log(currentItem)
+    if (currentItem != 8) {
+      changeCarousel(currentItem)
+    } else changeCarousel(0)
+  }, 8000)
 
   return (
     <div className='home'>
@@ -75,22 +100,26 @@ function Home() {
         alt='Horse and Buggy Banner'
         className='home__banner'
       />
-      <div className='home__hat-container'>
-        <img src='/public/images/hat1.png' alt='Hat 1' className='hat' />
-        <img src='/public/images/hat2.png' alt='Hat 2' className='hat' />
-        <img src='/public/images/hat3.png' alt='Hat 3' className='hat' />
-        <img src='/public/images/hat4.png' alt='Hat 4' className='hat' />
-        <img src='/public/images/hat5.png' alt='Hat 5' className='hat' />
-        <img src='/public/images/hat6.png' alt='Hat 6' className='hat' />
-        <img src='/public/images/hat7.png' alt='Hat 7' className='hat' />
-        <img src='/public/images/hat8.png' alt='Hat 8' className='hat' />
+      <div className='home-wrapper'>
+        <div className='home__hat-container'>
+          <img src='/public/images/hat1.png' alt='Hat 1' className='hat' />
+          <img src='/public/images/hat2.png' alt='Hat 2' className='hat' />
+          <img src='/public/images/hat3.png' alt='Hat 3' className='hat' />
+          <img src='/public/images/hat4.png' alt='Hat 4' className='hat' />
+          <img src='/public/images/hat5.png' alt='Hat 5' className='hat' />
+          <img src='/public/images/hat6.png' alt='Hat 6' className='hat' />
+          <img src='/public/images/hat7.png' alt='Hat 7' className='hat' />
+          <img src='/public/images/hat8.png' alt='Hat 8' className='hat' />
+        </div>
       </div>
       <h2 className='showcase__title'>Featured Showcase</h2>
       <div className='home__showcase'>
         <div className='showcase__product-list'>
           <span
             className='showcase__list-item item0'
-            onClick={() => changeCarousel(0)}
+            onClick={() => {
+              changeCarousel(0)
+            }}
             style={{
               backgroundColor: currentShowcase == 0 && '#444F66',
               color: currentShowcase == 0 && '#fff',
@@ -100,7 +129,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item1'
-            onClick={() => changeCarousel(1)}
+            onClick={() => {
+              changeCarousel(1)
+            }}
             style={{
               backgroundColor: currentShowcase == 1 && '#444F66',
               color: currentShowcase == 1 && '#fff',
@@ -110,7 +141,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item2'
-            onClick={() => changeCarousel(2)}
+            onClick={() => {
+              changeCarousel(2)
+            }}
             style={{
               backgroundColor: currentShowcase == 2 && '#444F66',
               color: currentShowcase == 2 && '#fff',
@@ -120,7 +153,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item3'
-            onClick={() => changeCarousel(3)}
+            onClick={() => {
+              changeCarousel(3)
+            }}
             style={{
               backgroundColor: currentShowcase == 3 && '#444F66',
               color: currentShowcase == 3 && '#fff',
@@ -130,7 +165,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item4'
-            onClick={() => changeCarousel(4)}
+            onClick={() => {
+              changeCarousel(4)
+            }}
             style={{
               backgroundColor: currentShowcase == 4 && '#444F66',
               color: currentShowcase == 4 && '#fff',
@@ -140,7 +177,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item5'
-            onClick={() => changeCarousel(5)}
+            onClick={() => {
+              changeCarousel(5)
+            }}
             style={{
               backgroundColor: currentShowcase == 5 && '#444F66',
               color: currentShowcase == 5 && '#fff',
@@ -150,7 +189,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item6'
-            onClick={() => changeCarousel(6)}
+            onClick={() => {
+              changeCarousel(6)
+            }}
             style={{
               backgroundColor: currentShowcase == 6 && '#444F66',
               color: currentShowcase == 6 && '#fff',
@@ -160,7 +201,9 @@ function Home() {
           </span>
           <span
             className='showcase__list-item item7'
-            onClick={() => changeCarousel(7)}
+            onClick={() => {
+              changeCarousel(7)
+            }}
             style={{
               backgroundColor: currentShowcase == 7 && '#444F66',
               color: currentShowcase == 7 && '#fff',
