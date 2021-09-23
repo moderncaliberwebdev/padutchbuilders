@@ -40,8 +40,6 @@ function Home() {
   const [currentShowcase, setCurrentShowcase] = useState(0)
 
   const changeCarousel = (item) => {
-    console.log(item)
-    console.log('carousel')
     const showcaseElements = [
       false,
       false,
@@ -53,8 +51,6 @@ function Home() {
       false,
     ]
     showcaseElements[item] = true
-    // console.log(item)
-    // console.log(showcaseElements)
     setShowcase(showcaseElements)
     setCurrentShowcase(Number(item))
   }
@@ -66,7 +62,6 @@ function Home() {
   useInterval(() => {
     const showcaseElements = showcase
     const currentItem = showcaseElements.indexOf(true) + 1
-    console.log(currentItem)
     if (currentItem != 8) {
       changeCarousel(currentItem)
     } else changeCarousel(0)
@@ -79,8 +74,45 @@ function Home() {
         <span>
           <a href='/'>HOME</a>
         </span>
-        <span>
-          <a href='/products'>PRODUCTS</a>
+        <span className='dropdown'>
+          <p>PRODUCTS</p>
+          <div className='home__dropdown'>
+            <a href='/sheds'>Sheds, Custom Sheds, Garages</a>
+            <a href='/gazebos'>Gazebos, Pergolas, Pavilions</a>
+            <a href='/poolhouses'>Pool Houses, Playhouses, Cabins</a>
+            <a href='/petstructures'>
+              Pet Structures, Horse Barns, Custom Barns
+            </a>
+            <a href='/roofing'>Roofing, Siding, and Amish Contractors</a>
+            <a href='/decks'>Decks, Porches, Fencing</a>
+            <a href='/swingsets'>Swingsets, Play Structures Fireplaces</a>
+            <a href='/industrialequipment'>
+              Industrial Equipment, Buggies and Wagons
+            </a>
+            <a href='/allproducts'>Complete Product Listing</a>
+            <a href='/catalogs'>VIRTUAL CATALOGS</a>
+            <a href='/homesweetcatalog' className='catalogsub'>
+              Home-Sweet-Homes Playhouses
+            </a>
+            <a href='/condorcatalog' className='catalogsub'>
+              The Condor Collection
+            </a>
+            <a href='/eaglecatalog' className='catalogsub'>
+              The Eagle Collection
+            </a>
+            <a href='/gazebocatalog' className='catalogsub'>
+              Gazebos
+            </a>
+            <a href='/swingsetcatalog' className='catalogsub'>
+              Swignsets and Play Structures
+            </a>
+            <a href='/playgroundcatalog' className='catalogsub'>
+              Wooden Playground Equipment
+            </a>
+            <a href='/horsestallcatalog' className='catalogsub'>
+              Custom Horse Stalls
+            </a>
+          </div>
         </span>
         <span>
           <a href='/whoweare'>WHO WE ARE...</a>
