@@ -8,6 +8,10 @@ import '../css/App.css'
 
 // import { actions } from '../store'
 import Home from '../Pages/Home'
+import WhoWeAre from '../Pages/WhoWeAre'
+import WhatWeDo from '../Pages/WhatWeDo'
+import Terms from '../Pages/Terms'
+import Contact from '../Pages/Contact'
 
 function App() {
   // const dispatch = useDispatch()
@@ -22,6 +26,10 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path='/whoweare' component={WhoWeAre} exact />
+        <Route path='/whatwedo' component={WhatWeDo} exact />
+        <Route path='/terms' component={Terms} exact />
+        <Route path='/contact' component={Contact} exact />
         <Route path='/' component={Home} exact />
       </Switch>
     </Router>

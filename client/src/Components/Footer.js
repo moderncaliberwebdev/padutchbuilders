@@ -2,9 +2,14 @@ import React from 'react'
 
 import '../css/Footer.css'
 
-function Footer() {
+function Footer({ marginBottom }) {
   return (
-    <footer className='footer'>
+    <footer
+      className='footer'
+      style={{
+        marginBottom: `${marginBottom}rem`,
+      }}
+    >
       <span className='footer__text'>
         © 2021 PA Dutch Builders<p className='footer__r'>®</p>, LLC | hosted by
         Destefano Enterprises, LLC

@@ -1,11 +1,16 @@
 .footer {
  background-color: #444F66;
- margin: 3rem 0 0 -5rem;
+ margin-top: 3rem;
+ margin-left: -5rem;
  width: 100vw;
+ position: absolute;
+ bottom: 0;
+ left: 0;
  padding: 4rem;
  text-align: center;
  font-size: 1.4rem;
  color: #fff;
+ 
 }
 
 .footer__text {

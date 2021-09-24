@@ -1,0 +1,14 @@
+
+.body__text {
+    text-indent: 0;
+}
+
+.terms__heading {
+    color: #444f66;
+    margin-bottom: 1rem;
+}
+
+.terms__title {
+    color: #444f66;
+    font-weight: 600;
+}

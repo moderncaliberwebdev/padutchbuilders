@@ -1,0 +1,44 @@
+.whoweare {
+    min-height: 100vh;
+    position: relative;
+}
+.whoweare__body {
+    width: 60rem;
+    background-color: #fff;
+    padding: 2rem;
+    margin: 5rem auto;
+    display: block;
+}    
+.body__title {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #444f66;
+}
+
+.body__date {
+    background-color: #444f66;
+    display: block;
+    padding: .5rem;
+    margin: 1rem 0;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+}
+
+.body__text {
+    color: #444f66;
+    line-height: 1.3rem;
+    text-indent: 1rem;
+    margin-bottom: 1rem;
+}
+
+.body__thanks {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444f66;
+    margin-top: 1rem;
+    
+}
