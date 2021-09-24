@@ -10,11 +10,15 @@ function Contact() {
     <div className='contact'>
       <Header />
       <h1 className='contact__title'>
-        Sales at PA Dutch Builders<p className='footer__r'>®</p>, LLC
+        Sales at PA Dutch Builders<p className='contact__r'>®</p>, LLC
       </h1>
       <div className='contact__box'>
         <div className='box__item'>
-          <img src='' alt='PO Box' className='box__item-img' />
+          <img
+            src='/public/images/pobox.png'
+            alt='PO Box'
+            className='box__item-img'
+          />
           <p className='box__item-text'>
             P.O. Box 264
             <br />
@@ -26,15 +30,27 @@ function Contact() {
           </p>
         </div>
         <div className='box__item'>
-          <img src='' alt='Email' className='box__item-img' />
+          <img
+            src='/public/images/email.png'
+            alt='Email'
+            className='box__item-img'
+          />
           <p className='box__item-text'>sales@padutchbuilders.com</p>
         </div>
         <div className='box__item'>
-          <img src='' alt='Phone Number' className='box__item-img' />
+          <img
+            src='/public/images/phone.png'
+            alt='Phone Number'
+            className='box__item-img'
+          />
           <p className='box__item-text'>717-488-8005</p>
         </div>
         <div className='box__item'>
-          <img src='' alt='Fax' className='box__item-img' />
+          <img
+            src='/public/images/fax.png'
+            alt='Fax'
+            className='box__item-img'
+          />
           <p className='box__item-text'>717-445-6492 (Fax)</p>
         </div>
       </div>
@@ -51,11 +67,11 @@ function Contact() {
           <input type='text' className='form__textbox' placeholder='Name' />
           <input type='text' className='form__textbox' placeholder='Email' />
           <input type='text' className='form__textbox' placeholder='Subject' />
-          <input type='text' className='form__message' placeholder='Message' />
+          <textarea className='form__message' placeholder='Message'></textarea>
           <input type='submit' className='form__submit' value='Send' />
         </form>
       </div>
-      <Footer marginLeft={0} marginBottom={0} />
+      <Footer marginLeft={0} marginBottom={-20} />
     </div>
   )
 }
