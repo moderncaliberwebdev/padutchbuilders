@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import '../css/Contact.css'
 
@@ -6,6 +7,35 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
 function Contact() {
+  const formSubmit = () => {
+    const name = document.getElementById('input-name')
+    const email = document.getElementById('input-email')
+    const subject = document.getElementById('input-subject')
+    const themessage = document.getElementById('themessage')
+    const message = document.getElementById('input-message')
+    const formResponse = document.getElementById('contact__form-res')
+    const inputs = [name, email, subject, message]
+
+    if (themessage.value == '') {
+      formResponse.textContent = 'Sending...'
+      axios
+        .get(
+          //use /api for dev and take it away for prod
+          `/api/email?name=${name.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`
+        )
+        .then((res) => {
+          const data = res.data
+          if (data.formResponse) {
+            formResponse.textContent = data.formResponse
+          } else {
+            formResponse.textContent = 'Message Sent'
+            inputs.forEach((input) => {
+              input.value = ''
+            })
+          }
+        })
+    }
+  }
   return (
     <div className='contact'>
       <Header />
@@ -70,13 +100,43 @@ function Contact() {
           <br />
           FILL OUT THIS SHORT FORM AND A REPRESENTATIVE WILL CONTACT YOU.
         </span>
-        <form className='box__form'>
-          <input type='text' className='form__textbox' placeholder='Name' />
-          <input type='text' className='form__textbox' placeholder='Email' />
-          <input type='text' className='form__textbox' placeholder='Subject' />
-          <textarea className='form__message' placeholder='Message'></textarea>
-          <input type='submit' className='form__submit' value='Send' />
-        </form>
+        <div className='box__form'>
+          <input
+            type='text'
+            className='form__textbox'
+            placeholder='Name'
+            id='input-name'
+          />
+          <input
+            type='text'
+            className='form__textbox'
+            placeholder='Email'
+            id='input-email'
+          />
+          <input
+            type='text'
+            className='form__textbox'
+            placeholder='Subject'
+            id='input-subject'
+          />
+          <textarea
+            className='form__message'
+            placeholder='Message'
+            id='themessage'
+          ></textarea>
+          <textarea
+            className='form__message'
+            placeholder='Message'
+            id='input-message'
+          ></textarea>
+          <input
+            type='submit'
+            className='form__submit'
+            value='Send'
+            onClick={() => formSubmit()}
+          />
+          <p id='contact__form-res'></p>
+        </div>
       </div>
       <Footer marginLeft={0} marginBottom={-20} />
     </div>

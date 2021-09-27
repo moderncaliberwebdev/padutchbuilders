@@ -84,6 +84,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#themessage {
+    display: none;
+}
+
 .form__submit {
     width: 20rem;
     color: #fff;
@@ -91,4 +95,9 @@
     margin: 1rem auto;
     padding: 1rem;
     border-style: none;
+}
+
+#contact__form-res {
+    display: block;
+    text-align: center;
 }
