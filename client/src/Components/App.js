@@ -12,6 +12,8 @@ import WhoWeAre from '../Pages/WhoWeAre'
 import WhatWeDo from '../Pages/WhatWeDo'
 import Terms from '../Pages/Terms'
 import Contact from '../Pages/Contact'
+import Catalogs from '../Pages/Catalogs'
+import CatalogPage from '../Pages/CatalogPage'
 
 function App() {
   // const dispatch = useDispatch()
@@ -30,6 +32,46 @@ function App() {
         <Route path='/whatwedo' component={WhatWeDo} exact />
         <Route path='/terms' component={Terms} exact />
         <Route path='/contact' component={Contact} exact />
+        <Route path='/catalogs' component={Catalogs} exact />
+        <Route path='/catalogs/homesweet' exact>
+          <CatalogPage
+            title={'Home-Sweet-Homes Playhouses'}
+            pdf={'/public/pdfs/homesweet.pdf'}
+          />
+        </Route>
+        <Route path='/catalogs/condor' exact>
+          <CatalogPage
+            title={'The Condor Collection'}
+            pdf={'/public/pdfs/condor.pdf'}
+          />
+        </Route>
+        <Route path='/catalogs/eagle' exact>
+          <CatalogPage
+            title={'The Eagle Collection'}
+            pdf={'/public/pdfs/eagle.pdf'}
+          />
+        </Route>
+        <Route path='/catalogs/gazebo' exact>
+          <CatalogPage title={'Gazebos'} pdf={'/public/pdfs/gazebos.pdf'} />
+        </Route>
+        <Route path='/catalogs/swingset' exact>
+          <CatalogPage
+            title={'Swingsets and Play Structures'}
+            pdf={'/public/pdfs/playstructures.pdf'}
+          />
+        </Route>
+        <Route path='/catalogs/playground' exact>
+          <CatalogPage
+            title={'Wooden Playground Equipment'}
+            pdf={'/public/pdfs/playground.pdf'}
+          />
+        </Route>
+        <Route path='/catalogs/horsestall' exact>
+          <CatalogPage
+            title={'Custom Horse Stalls'}
+            pdf={'/public/pdfs/stalls.pdf'}
+          />
+        </Route>
         <Route path='/' component={Home} exact />
       </Switch>
     </Router>

@@ -5,6 +5,8 @@
 }
 
 .home__nav {
+  position: relative;
+  z-index: 999;
   background-color: #d12f34;
   width: 100vw;
   margin: 2rem 0 0 -5rem;

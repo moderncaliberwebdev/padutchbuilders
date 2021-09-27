@@ -35,7 +35,14 @@ function Contact() {
             alt='Email'
             className='box__item-img'
           />
-          <p className='box__item-text'>sales@padutchbuilders.com</p>
+          <p
+            className='box__item-text email'
+            onClick={() =>
+              (window.location.href = 'mailto:sales@padutchbuilders.com')
+            }
+          >
+            sales@padutchbuilders.com
+          </p>
         </div>
         <div className='box__item'>
           <img

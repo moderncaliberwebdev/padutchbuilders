@@ -1,0 +1,20 @@
+.catalogitem {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 20rem;
+}
+
+.catalogitem__title {
+    color: #444f66;
+    text-align: center;
+}
+
+.catalogitem__img {
+    width: 15rem;
+    display: block;
+    margin: 0 auto;
+}

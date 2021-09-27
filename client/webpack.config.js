@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // the output bundle won"t be optimized for production but suitable for development
@@ -18,6 +19,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // the filename of the JS bundle will be bundle.js
     filename: 'bundle.js',
+
+    //fixes nested routing in react router
+    publicPath: '/',
   },
   module: {
     rules: [

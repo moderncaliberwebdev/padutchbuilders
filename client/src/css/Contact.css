@@ -43,6 +43,14 @@
     padding: .5rem 1rem;
 }
 
+.email {
+    cursor: pointer;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
 .box__subtitle {
     color: #fff;
     background-color: #444f66;

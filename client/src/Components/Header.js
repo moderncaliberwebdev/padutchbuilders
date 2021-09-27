@@ -29,25 +29,25 @@ function Header() {
             </a>
             <a href='/allproducts'>Complete Product Listing</a>
             <a href='/catalogs'>VIRTUAL CATALOGS</a>
-            <a href='/homesweetcatalog' className='catalogsub'>
+            <a href='/catalogs/homesweet' className='catalogsub'>
               Home-Sweet-Homes Playhouses
             </a>
-            <a href='/condorcatalog' className='catalogsub'>
+            <a href='/catalogs/condor' className='catalogsub'>
               The Condor Collection
             </a>
-            <a href='/eaglecatalog' className='catalogsub'>
+            <a href='/catalogs/eagle' className='catalogsub'>
               The Eagle Collection
             </a>
-            <a href='/gazebocatalog' className='catalogsub'>
+            <a href='/catalogs/gazebo' className='catalogsub'>
               Gazebos
             </a>
-            <a href='/swingsetcatalog' className='catalogsub'>
-              Swignsets and Play Structures
+            <a href='/catalogs/swingset' className='catalogsub'>
+              Swingsets and Play Structures
             </a>
-            <a href='/playgroundcatalog' className='catalogsub'>
+            <a href='/catalogs/playground' className='catalogsub'>
               Wooden Playground Equipment
             </a>
-            <a href='/horsestallcatalog' className='catalogsub'>
+            <a href='/catalogs/horsestall' className='catalogsub'>
               Custom Horse Stalls
             </a>
           </div>
