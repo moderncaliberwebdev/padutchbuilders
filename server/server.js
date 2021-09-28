@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 
 // DB
-// import connectDB from './config/db.js'
+import connectDB from './config/db.js'
 
 // Routes
 import routes from './routes/router.js'
@@ -14,7 +14,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 app.use(express.json())
 dotenv.config()
-// connectDB()
+connectDB()
 
 app.use('/api', routes)
 

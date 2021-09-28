@@ -1,0 +1,11 @@
+.productlist {
+    min-height: 100vh;
+    position: relative;
+}
+
+.productlist__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

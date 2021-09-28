@@ -14,6 +14,7 @@ import Terms from '../Pages/Terms'
 import Contact from '../Pages/Contact'
 import Catalogs from '../Pages/Catalogs'
 import CatalogPage from '../Pages/CatalogPage'
+import ProductList from '../Pages/ProductList'
 
 function App() {
   // const dispatch = useDispatch()
@@ -70,6 +71,15 @@ function App() {
           <CatalogPage
             title={'Custom Horse Stalls'}
             pdf={'/public/pdfs/stalls.pdf'}
+          />
+        </Route>
+        <Route path='/sheds' exact>
+          <ProductList
+            title={'Sheds, Custom Sheds, Garages'}
+            subtitle={
+              'All products come fully assembled & professionally delivered. We provide onsite installation and set up when necessary.'
+            }
+            products={['shed', 'garage']}
           />
         </Route>
         <Route path='/' component={Home} exact />
