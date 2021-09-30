@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import '../css/ProductList.css'
@@ -7,33 +7,30 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Product from '../Components/Product'
 
-function ProductList() {
-  const products = [
-    {
-      title: 'All Types of Concrete Slabs',
-      price: '$2,100.00 Plus S&H',
-      image: '/public/images/products/sheds/concreteslab.png',
-    },
-  ]
+function ProductList({ title, subtitle, prodType, urlPath }) {
+  const [products, setProducts] = useState([])
 
-  //   useEffect(() => {
-  //     async function fetchMyAPI() {
-  //       const { data } = await axios.post(`/api/products`)
-  //     }
+  useEffect(() => {
+    async function fetchMyAPI() {
+      const { data } = await axios.get(`/api/products?prodtype=${prodType}`)
+      setProducts(data)
+    }
 
-  //     fetchMyAPI()
-  //   }, [])
+    fetchMyAPI()
+  }, [])
 
   return (
     <div className='productlist'>
       <Header />
+      <h1 className='productlist__title'>{title}</h1>
+      <span className='productlist__subtitle'>{subtitle}</span>
       <div className='productlist__container'>
         {products.map((product) => (
           <Product
-            image={product.image}
+            image={product.images[0]}
             title={product.title}
-            price={product.price}
-            link={'/'}
+            price={product.price == 'N/A' ? '' : product.price}
+            link={`/products/${urlPath}/${product._id}`}
             key={product.title}
           />
         ))}

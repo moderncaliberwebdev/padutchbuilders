@@ -79,7 +79,8 @@ function App() {
             subtitle={
               'All products come fully assembled & professionally delivered. We provide onsite installation and set up when necessary.'
             }
-            products={['shed', 'garage']}
+            prodType={'Shed'}
+            urlPath={'sheds'}
           />
         </Route>
         <Route path='/' component={Home} exact />

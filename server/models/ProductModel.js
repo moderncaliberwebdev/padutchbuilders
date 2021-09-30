@@ -9,9 +9,21 @@ const productModelSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
+  images: {
+    type: Array,
+    required: true,
+  },
+  prodType: {
     type: String,
     required: true,
+  },
+  details: {
+    type: Array,
+    required: true,
+  },
+  extraDetails: {
+    type: Boolean,
+    required: false,
   },
 })
 

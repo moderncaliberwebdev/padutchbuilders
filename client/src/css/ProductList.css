@@ -3,6 +3,22 @@
     position: relative;
 }
 
+.productlist__title {
+    color: #444F66;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+.productlist__subtitle {
+    color: #fff;
+    background-color: #444f66;
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
 .productlist__container {
     display: flex;
     flex-direction: row;
