@@ -9,6 +9,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .product__image-wrapper, .product__title a, .product__readmore-wrapper {

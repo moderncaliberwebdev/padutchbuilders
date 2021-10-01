@@ -7,7 +7,7 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Product from '../Components/Product'
 
-function ProductList({ title, subtitle, prodType, urlPath }) {
+function ProductList({ title, subtitle, prodType }) {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -15,7 +15,6 @@ function ProductList({ title, subtitle, prodType, urlPath }) {
       const { data } = await axios.get(`/api/products?prodtype=${prodType}`)
       setProducts(data)
     }
-
     fetchMyAPI()
   }, [])
 
@@ -23,14 +22,24 @@ function ProductList({ title, subtitle, prodType, urlPath }) {
     <div className='productlist'>
       <Header />
       <h1 className='productlist__title'>{title}</h1>
-      <span className='productlist__subtitle'>{subtitle}</span>
+      {subtitle && <span className='productlist__subtitle'>{subtitle}</span>}
       <div className='productlist__container'>
         {products.map((product) => (
           <Product
             image={product.images[0]}
             title={product.title}
             price={product.price == 'N/A' ? '' : product.price}
-            link={`/products/${urlPath}/${product._id}`}
+            link={`/products/${
+              product.prodType == 'Shed'
+                ? 'sheds'
+                : product.prodType == 'Gazebo'
+                ? 'gazebos'
+                : product.prodType == 'Poolhouses'
+                ? 'poolhouses'
+                : product.prodType == 'Pet Structures'
+                ? 'petstructures'
+                : product.prodType == ''
+            }/${product._id}`}
             key={product.title}
           />
         ))}

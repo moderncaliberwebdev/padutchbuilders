@@ -80,7 +80,67 @@ function App() {
               'All products come fully assembled & professionally delivered. We provide onsite installation and set up when necessary.'
             }
             prodType={'Shed'}
-            urlPath={'sheds'}
+          />
+        </Route>
+        <Route path='/gazebos' exact>
+          <ProductList
+            title={'Gazebos, Pergolas, Pavilions'}
+            subtitle={
+              'All products come fully assembled & professionally delivered.'
+            }
+            prodType={'Gazebo'}
+          />
+        </Route>
+        <Route path='/poolhouses' exact>
+          <ProductList
+            title={'Pool Houses, Playhouses, Cabins'}
+            subtitle={
+              'All products come fully assembled & professionally delivered.'
+            }
+            prodType={'Poolhouses'}
+          />
+        </Route>
+        <Route path='/petstructures' exact>
+          <ProductList
+            title={'Pet Structures, Horse Barns, Custom Barns'}
+            subtitle={
+              'All products come fully assembled & professionally delivered.'
+            }
+            prodType={'Pet Structures'}
+          />
+        </Route>
+        <Route path='/roofing' exact>
+          <ProductList
+            title={'Roofing, Siding, and Amish Contractors'}
+            subtitle={
+              'If you want to post your project for estimates or bids. - Visit PaDutchContractors.com'
+            }
+            prodType={'Roofing'}
+          />
+        </Route>
+        <Route path='/decks' exact>
+          <ProductList title={'Decks, Porches, Fencing'} prodType={'Decks'} />
+        </Route>
+        <Route path='/swingsets' exact>
+          <ProductList
+            title={'Swingsets, Play Structures, Fireplaces'}
+            subtitle={
+              'All products come fully assembled & professionally delivered.'
+            }
+            prodType={'Swingsets'}
+          />
+        </Route>
+        <Route path='/industrialequipment' exact>
+          <ProductList
+            title={'Industrial Equipment, Buggies & Wagons'}
+            prodType={'Industrial Equipment'}
+          />
+        </Route>
+        <Route path='/allproducts' exact>
+          <ProductList
+            title={'All Products'}
+            subtitle={'All products offered by PADutchBuilders.com'}
+            prodType={''}
           />
         </Route>
         <Route path='/' component={Home} exact />
