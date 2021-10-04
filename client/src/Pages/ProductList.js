@@ -38,7 +38,14 @@ function ProductList({ title, subtitle, prodType }) {
                 ? 'poolhouses'
                 : product.prodType == 'Pet Structures'
                 ? 'petstructures'
-                : product.prodType == ''
+                : product.prodType == 'Roofing'
+                ? 'roofing'
+                : product.prodType == 'Decks'
+                ? 'decks'
+                : product.prodType == 'Swingsets'
+                ? 'swingsets'
+                : product.prodType == 'Industrial Equipment' &&
+                  'industrialequipment'
             }/${product._id}`}
             key={product.title}
           />
