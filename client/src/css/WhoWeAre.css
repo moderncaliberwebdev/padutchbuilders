@@ -10,7 +10,7 @@
     display: block;
 }    
 .body__title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 100;
     color: #444f66;
 }
@@ -23,20 +23,22 @@
     text-align: left;
     width: 100%;
     color: #fff;
+    font-size: 1.3rem;
 }
 
 .body__text {
     color: #444f66;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     text-indent: 1rem;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 .body__thanks {
     text-align: center;
     display: block;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #444f66;
     margin-top: 1rem;

@@ -21,17 +21,18 @@
 
 .info__title {
     font-weight: 100;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .info__price {
     margin-top: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .info__interested {
     margin-top: 1rem;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .info__sales {
@@ -39,7 +40,7 @@
     background-color: #D12F34;
     padding: .75rem 1.5rem;
     border-style: none;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .showcaseproduct__readmore {

@@ -15,6 +15,7 @@ import Contact from '../Pages/Contact'
 import Catalogs from '../Pages/Catalogs'
 import CatalogPage from '../Pages/CatalogPage'
 import ProductList from '../Pages/ProductList'
+import ProductPage from '../Pages/ProductPage'
 
 function App() {
   // const dispatch = useDispatch()
@@ -82,6 +83,11 @@ function App() {
             prodType={'Shed'}
           />
         </Route>
+        <Route
+          path='/products/sheds/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/gazebos' exact>
           <ProductList
             title={'Gazebos, Pergolas, Pavilions'}
@@ -91,6 +97,11 @@ function App() {
             prodType={'Gazebo'}
           />
         </Route>
+        <Route
+          path='/products/gazebos/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/poolhouses' exact>
           <ProductList
             title={'Pool Houses, Playhouses, Cabins'}
@@ -100,6 +111,11 @@ function App() {
             prodType={'Poolhouses'}
           />
         </Route>
+        <Route
+          path='/products/poolhouses/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/petstructures' exact>
           <ProductList
             title={'Pet Structures, Horse Barns, Custom Barns'}
@@ -109,6 +125,11 @@ function App() {
             prodType={'Pet Structures'}
           />
         </Route>
+        <Route
+          path='/products/petstructures/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/roofing' exact>
           <ProductList
             title={'Roofing, Siding, and Amish Contractors'}
@@ -118,9 +139,19 @@ function App() {
             prodType={'Roofing'}
           />
         </Route>
+        <Route
+          path='/products/roofing/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/decks' exact>
           <ProductList title={'Decks, Porches, Fencing'} prodType={'Decks'} />
         </Route>
+        <Route
+          path='/products/decks/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/swingsets' exact>
           <ProductList
             title={'Swingsets, Play Structures, Fireplaces'}
@@ -130,12 +161,22 @@ function App() {
             prodType={'Swingsets'}
           />
         </Route>
+        <Route
+          path='/products/swingsets/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/industrialequipment' exact>
           <ProductList
             title={'Industrial Equipment, Buggies & Wagons'}
             prodType={'Industrial Equipment'}
           />
         </Route>
+        <Route
+          path='/products/industrialequipment/:productid'
+          component={ProductPage}
+          exact
+        />
         <Route path='/allproducts' exact>
           <ProductList
             title={'All Products'}

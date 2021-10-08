@@ -16,7 +16,14 @@ function Product({ image, title, price, link }) {
       </h3>
       <span className='product__price'>{price}</span>
       <span className='product__interested'>Interested?</span>
-      <button className='product__sales'>Email Sales</button>
+      <button
+        className='product__sales'
+        onClick={() =>
+          (window.location.href = 'mailto:sales@padutchbuilders.com')
+        }
+      >
+        Email Sales
+      </button>
     </div>
   )
 }
