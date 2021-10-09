@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import '../css/Home.css'
 
@@ -236,7 +237,10 @@ function Home() {
         />
       </div>
       <div className='home__services'>
-        <div className='services__servicebox'>
+        <a
+          className='services__servicebox'
+          href='http://www.padutchcontractors.com/'
+        >
           <img
             className='servicebox__img'
             src='/public/images/contract.png'
@@ -245,24 +249,34 @@ function Home() {
           <h4 className='servicebox__title'>
             Post Your Contracting Job for Bids
           </h4>
-        </div>
-        <div className='services__servicebox'>
+        </a>
+        <a
+          className='services__servicebox'
+          href='http://www.padutchauctions.com/'
+        >
           <img
             className='servicebox__img'
             src='/public/images/auction.png'
             alt='Auctions'
           />
           <h4 className='servicebox__title'>Visit Our PA Dutch Auctions</h4>
-        </div>
-        <div className='services__servicebox'>
+        </a>
+        <a className='services__servicebox' href='/catalogs'>
           <img
             className='servicebox__img'
             src='/public/images/catalog.png'
             alt='Catalog'
           />
           <h4 className='servicebox__title'>See Our Virtual Catalogs</h4>
-        </div>
-        <div className='services__servicebox'>
+        </a>
+        <a
+          className='services__servicebox'
+          href='#'
+          onClick={() =>
+            (window.location.href =
+              'mailto:sales@padutchbuilders.com?subject=Schedule A Tour Inquiry')
+          }
+        >
           <img
             className='servicebox__img'
             src='/public/images/calendar.png'
@@ -271,7 +285,7 @@ function Home() {
           <h4 className='servicebox__title'>
             Schedule a Tour of a PA Dutch Farm
           </h4>
-        </div>
+        </a>
       </div>
       <div className='interested__cont'>
         <h2 className='interested__title'>Interested?</h2>
@@ -279,9 +293,18 @@ function Home() {
           Contact us about any of the products you see!
         </p>
         <div className='interested__contact'>
-          <p className='interested__number'>717-488-8005</p>
+          <a className='interested__number' href='tel://+17174888005'>
+            717-488-8005
+          </a>
           <p className='interested__or'>or</p>
-          <p className='interested__email'>Sales@padutchbuilders.com</p>
+          <p
+            className='interested__email'
+            onClick={() =>
+              (window.location.href = 'mailto:sales@padutchbuilders.com')
+            }
+          >
+            Sales@padutchbuilders.com
+          </p>
         </div>
       </div>
       <div className='home__aboutamish'>

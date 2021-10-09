@@ -79,11 +79,11 @@
 
 .services__servicebox {
   background-color: #fff;
-  color: #444f66;
   padding: 2rem;
   width: 20rem;
   height: 15rem;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .services__servicebox:hover {
@@ -97,6 +97,7 @@
 
 .servicebox__title {
   font-size: 1.5rem;
+  color: #444f66;
 }
 
 .interested__cont {
@@ -132,6 +133,7 @@
   cursor: pointer;
   color: #d12f34;
   font-size: 1.4rem;
+  text-decoration: none;
 }
 
 .interested__or {

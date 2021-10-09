@@ -79,3 +79,44 @@
   border-style: none;
   cursor: pointer;
 }
+
+.productpage__extrainfo {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 40rem;
+}
+
+
+.extrainfo__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444f66;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.extrainfo__sub {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444f66;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.extrainfo__details {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.extrainfo__note {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444f66;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
