@@ -27,13 +27,18 @@
 }
 
 .home__hat-container {
-  width: 100vw;
+  width: 100rem;
   margin: 0 auto;
   padding: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+  .home__hat-container {
+    width: 100vw;
+  }
 }
 
 .hat {
@@ -102,23 +107,6 @@
   color: #fff;
 }
 
-/* .home__circles {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.circle {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #444f66;
-  background-size: 50% 50%;
-  background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  margin: 1rem;
-} */
-
 .home__services {
   margin-top: 5rem;
   display: flex;
@@ -135,7 +123,8 @@
 .services__servicebox {
   background-color: #fff;
   padding: 2rem;
-  width: 20rem;
+  width: calc(100% / 4 - 1rem);
+  font-size: 3rem;
   height: 15rem;
   transition: all 0.2s;
   text-decoration: none;
