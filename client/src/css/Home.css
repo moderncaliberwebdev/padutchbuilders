@@ -58,6 +58,11 @@
   font-size: 2rem;
   margin-top: 3rem;
 }
+@media only screen and (max-width: 600px) {
+  .showcase__title {
+    font-size: 3rem;
+  }
+}
 
 .home__showcase {
   background-color: #fff;
