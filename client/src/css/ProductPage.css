@@ -13,12 +13,12 @@
 }
 
 .productpage__image-container {
-  width: 40rem;
+  width: 100%;
   margin: 0 auto;
 }
 
 .image-container__image {
-  width: 40rem;
+  width: 100%;
   margin: 1rem auto;
   border-radius: 5px;
 }
@@ -27,7 +27,7 @@
   background-color: #fff;
   padding: 2rem;
   margin: 0 auto;
-  width: 40rem;
+  width: 100%;
 }
 
 .details__title {
@@ -50,7 +50,7 @@
   background-color: #fff;
   padding: 2rem;
   margin: 2rem auto;
-  width: 40rem;
+  width: 100%;
 }
 
 .info__title {
@@ -84,7 +84,7 @@
   background-color: #fff;
   padding: 2rem;
   margin: 2rem auto;
-  width: 40rem;
+  width: 100%;
 }
 
 

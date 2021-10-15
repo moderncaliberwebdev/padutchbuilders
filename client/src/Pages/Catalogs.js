@@ -53,7 +53,7 @@ function Catalogs() {
           linkto={'/catalogs/horsestall'}
         />
       </div>
-      <Footer marginLeft={20} marginBottom={-20} />
+      <Footer marginLeft={20} marginBottom={-30} />
     </div>
   )
 }

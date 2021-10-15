@@ -11,7 +11,7 @@
 }    
 @media only screen and (max-width: 600px) {
     .whoweare__body {
-        width: 40rem;
+        width: 100%;
     }
 }
 .body__title {

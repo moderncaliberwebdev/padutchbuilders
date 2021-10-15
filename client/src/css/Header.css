@@ -59,9 +59,14 @@
 @media only screen and (max-width: 600px) {
   .home__nav span .nav__item{
     text-align: left;
-    padding: 6rem 4rem;
-    height: 15rem;
+    padding: 4rem 4rem;
+    height: 11rem;
     font-size: 3rem;
+  }
+
+  .first {
+    padding-top: 8rem !important;
+    height: 15rem;
   }
 }
 
@@ -88,8 +93,8 @@
 @media only screen and (max-width: 600px) {
   .home__nav span:hover .nav__item{
     color: #fff;
-    padding: 6rem 4rem;
-    height: 15rem;
+    padding: 4rem 4rem;
+    height: 11rem;
   }
 }
 

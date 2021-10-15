@@ -296,7 +296,7 @@ function ProductPage({ match }) {
           Email Sales
         </button>
       </div>
-      <Footer marginLeft={0} marginBottom={-20} />
+      <Footer marginLeft={0} marginBottom={-30} />
     </div>
   )
 }

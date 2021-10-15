@@ -29,7 +29,7 @@ export const mailTo = (name, email, subject, message, callback) => {
             `
     const mailOptions = {
       from: email,
-      to: 'cmartin@moderncaliber.com',
+      to: 'sales@padutchbuilders.com',
       subject: 'PA Dutch Builders Contact Request',
       html: output,
     }
