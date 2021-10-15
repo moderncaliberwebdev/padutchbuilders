@@ -8,6 +8,12 @@
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
+@media only screen and (max-width: 600px) {
+    .terms__heading {
+        font-size: 1.6rem;
+    }
+}
+
 
 .terms__title {
     color: #444f66;

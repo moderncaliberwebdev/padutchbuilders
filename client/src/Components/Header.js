@@ -5,10 +5,31 @@ import '../css/Header.css'
 function Header() {
   return (
     <>
-      <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
+      <a href='/'>
+        <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
+      </a>
+
+      <img
+        src='/public/images/menu.png'
+        alt='Menu'
+        className='home__menu'
+        onClick={() => {
+          document.querySelector('.home__nav-menu').style.display = 'block'
+          document.querySelector('.home__nav').style.width = '100vw'
+        }}
+      />
       <nav className='home__nav'>
+        <img
+          src='/public/images/menu-white.png'
+          alt='Menu'
+          className='home__nav-menu'
+          onClick={() => {
+            document.querySelector('.home__nav-menu').style.display = 'none'
+            document.querySelector('.home__nav').style.width = '0'
+          }}
+        />
         <span>
-          <a href='/' className='nav__item'>
+          <a href='/' className='nav__item first'>
             HOME
           </a>
         </span>

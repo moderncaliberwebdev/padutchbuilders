@@ -1,23 +1,27 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 import '../css/ShowcaseProduct.css'
 
-function ShowcaseProduct({ image, title, price, show }) {
+function ShowcaseProduct({ image, title, price, show, pageUrl }) {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
   return (
     <div
       className='showcaseproduct'
-      style={{ display: show ? 'flex' : 'none' }}
+      style={{ display: isTabletOrMobile ? 'flex' : show ? 'flex' : 'none' }}
     >
-      <div className='showcaseproduct__img-cont'>
+      <a className='showcaseproduct__img-cont' href={pageUrl}>
         <img
           className='showcaseproduct__img'
           src={image}
           alt='Showcase Product Image'
         />
         <p className='showcaseproduct__readmore'>Read More...</p>
-      </div>
+      </a>
       <div className='showcaseproduct__info-cont'>
-        <h3 className='info__title'>{title}</h3>
+        <a href={pageUrl}>
+          <h3 className='info__title'>{title}</h3>
+        </a>
         <p
           className='info__price'
           style={{ display: price ? 'block' : 'none' }}
@@ -25,7 +29,14 @@ function ShowcaseProduct({ image, title, price, show }) {
           {price}
         </p>
         <p className='info__interested'>Interested?</p>
-        <button className='info__sales'>Email Sales</button>
+        <button
+          className='info__sales'
+          onClick={() =>
+            (window.location.href = 'mailto:sales@padutchbuilders.com')
+          }
+        >
+          Email Sales
+        </button>
       </div>
     </div>
   )

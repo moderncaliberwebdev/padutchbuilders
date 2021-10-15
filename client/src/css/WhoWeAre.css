@@ -9,10 +9,20 @@
     margin: 5rem auto;
     display: block;
 }    
+@media only screen and (max-width: 600px) {
+    .whoweare__body {
+        width: 40rem;
+    }
+}
 .body__title {
     font-size: 1.7rem;
     font-weight: 100;
     color: #444f66;
+}
+@media only screen and (max-width: 600px) {
+    .body__title {
+        font-size: 1.9rem;  
+    }
 }
 
 .body__date {
@@ -25,6 +35,11 @@
     color: #fff;
     font-size: 1.3rem;
 }
+@media only screen and (max-width: 600px) {
+    .body__date {
+        font-size: 1.6rem;
+    }
+}
 
 .body__text {
     color: #444f66;
@@ -32,6 +47,12 @@
     text-indent: 1rem;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+}
+@media only screen and (max-width: 600px) {
+    .body__text {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
 }
 
 .body__thanks {
@@ -43,4 +64,11 @@
     color: #444f66;
     margin-top: 1rem;
     
+}
+@media only screen and (max-width: 600px) {
+    .body__thanks {
+     font-size: 1.6rem
+
+    }
+       
 }

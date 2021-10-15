@@ -1,4 +1,21 @@
 
+.home__nav-menu {
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 4rem;
+  right: 5rem;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .home__menu {
+    display: none;
+  }
+}
+
 .home__logo {
   width: 12rem;
   margin-top: -3rem;
@@ -6,12 +23,25 @@
 
 .home__nav {
   position: relative;
-  z-index: 999;
+  z-index: 990;
   background-color: #d12f34;
   width: 100vw;
   margin: 2rem 0 0 -5rem;
   display: flex;
   flex-direction: row;
+}
+@media only screen and (max-width: 600px) {
+  .home__nav {
+    height: 100vh;
+    width: 0;
+    margin: 0 -5rem 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
 }
 
 .home__nav span {
@@ -19,7 +49,6 @@
   /* padding: 1.5rem 2rem; */
   font-size: 1.4rem;
 }
-
 .home__nav span .nav__item{
   color: #fff;
   text-decoration: none;
@@ -27,17 +56,41 @@
   display: block;
   padding: 1.5rem 2rem;
 }
+@media only screen and (max-width: 600px) {
+  .home__nav span .nav__item{
+    text-align: left;
+    padding: 6rem 4rem;
+    height: 15rem;
+    font-size: 3rem;
+  }
+}
 
 .home__nav span:hover {
   background-color: #fff;
   border-radius: 10px 10px 0 0 ;
   border: 1px #000 solid;
 }
+@media only screen and (max-width: 600px) {
+  .home__nav span:hover {
+    background-color: #d46165;
+    color: #fff;
+    border-style: none;
+    font-size: 3rem;
+    border-radius: 0;
+  }
+}
 
 .home__nav span:hover .nav__item{
   color: #000;
   text-align: left;
   padding: 1.4rem 1.9rem;
+}
+@media only screen and (max-width: 600px) {
+  .home__nav span:hover .nav__item{
+    color: #fff;
+    padding: 6rem 4rem;
+    height: 15rem;
+  }
 }
 
 .home__nav span:hover p{
@@ -63,6 +116,13 @@
   text-align: left;
   margin-left: -.1rem;
 }
+@media only screen and (max-width: 600px) {
+  .home__dropdown{
+   position: relative;
+   border-radius: 0;
+   border-style: none;
+  }
+}
 
 .home__dropdown a {
   color: #000;
@@ -70,10 +130,25 @@
   text-decoration: none;
   display: block;
 }
+@media only screen and (max-width: 600px) {
+  .home__dropdown a{
+    color: #d12f34;
+  }
+}
 
 .home__dropdown a:hover {background-color: #f1f1f1}
 .home__dropdown a:nth-of-type(1):hover {border-radius: 0 10px 0 0;}
+@media only screen and (max-width: 600px) {
+  .home__dropdown a:nth-of-type(1):hover{
+    border-radius: 0 0 0 0 ;
+  }
+}
 .home__dropdown a:nth-of-type(17):hover {border-radius: 0 0 10px 0;}
+@media only screen and (max-width: 600px) {
+  .home__dropdown a:nth-of-type(17):hover{
+    border-radius: 0;
+  }
+}
 
 .dropdown:hover .home__dropdown {
   display: block;
@@ -82,4 +157,9 @@
 .catalogsub {
   font-size: 1.2rem;
   margin-left: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .catalogsub{
+    font-size: 2.2rem;
+  }
 }

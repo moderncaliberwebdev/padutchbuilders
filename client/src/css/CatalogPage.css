@@ -19,6 +19,12 @@
     height: auto !important;
     z-index: 100;
 }
+@media only screen and (max-width: 750px) {
+    .react-pdf__Page__canvas {
+        width: 45rem !important;
+        height: auto !important;
+    }
+ }
 
 .react-pdf__Document:hover ~ .catalogpage__pages {
     opacity: 100;

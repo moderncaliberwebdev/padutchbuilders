@@ -79,14 +79,30 @@ function Home() {
       />
       <div className='home-wrapper'>
         <div className='home__hat-container'>
-          <img src='/public/images/hat1.png' alt='Hat 1' className='hat' />
-          <img src='/public/images/hat2.png' alt='Hat 2' className='hat' />
-          <img src='/public/images/hat3.png' alt='Hat 3' className='hat' />
-          <img src='/public/images/hat4.png' alt='Hat 4' className='hat' />
-          <img src='/public/images/hat5.png' alt='Hat 5' className='hat' />
-          <img src='/public/images/hat6.png' alt='Hat 6' className='hat' />
-          <img src='/public/images/hat7.png' alt='Hat 7' className='hat' />
-          <img src='/public/images/hat8.png' alt='Hat 8' className='hat' />
+          <a href='/sheds'>
+            <img src='/public/images/hat1.png' alt='Hat 1' className='hat' />
+          </a>
+          <a href='/gazebos'>
+            <img src='/public/images/hat2.png' alt='Hat 2' className='hat' />
+          </a>
+          <a href='/poolhouses'>
+            <img src='/public/images/hat3.png' alt='Hat 3' className='hat' />
+          </a>
+          <a href='/petstructures'>
+            <img src='/public/images/hat4.png' alt='Hat 4' className='hat' />
+          </a>
+          <a href='/swingsets'>
+            <img src='/public/images/hat5.png' alt='Hat 5' className='hat' />
+          </a>
+          <a href='/decks'>
+            <img src='/public/images/hat6.png' alt='Hat 6' className='hat' />
+          </a>
+          <a href='/roofing'>
+            <img src='/public/images/hat7.png' alt='Hat 7' className='hat' />
+          </a>
+          <a href='/industrialequipment'>
+            <img src='/public/images/hat8.png' alt='Hat 8' className='hat' />
+          </a>
         </div>
       </div>
       <h2 className='showcase__title'>Featured Showcase</h2>
@@ -191,51 +207,64 @@ function Home() {
         </div>
         <ShowcaseProduct
           image='/public/images/QHWMonsterT175.png'
-          title='4x4 Monster Truck with Slide'
-          price='$2,100.00 Plus S&H'
+          title='Monster Truck with Slide'
+          price='$2,100.00 excludes shipping'
           show={showcase[0]}
+          pageUrl={'/products/swingsets/615f59d3d66d9c38dcf5e79c'}
         />
         <ShowcaseProduct
           image='/public/images/SCCGC175.png'
           title='Goat Barn and Chicken Coop'
           show={showcase[1]}
+          pageUrl={'/products/petstructures/615b45d6d66d9c38dcf5e772'}
         />
         <ShowcaseProduct
           image='/public/images/SCC5175.png'
           title='4x6 Quaker Chicken Coop'
           price='$1,495.00 Plus S&H '
           show={showcase[2]}
+          pageUrl={'/products/petstructures/61575c1330e7eba3665b5ca3'}
         />
         <ShowcaseProduct
           image='/public/images/ChickenCoopPenRedo175.png'
-          title='4x6 Chicken Coop'
+          title="4' x 6' Chicken Coop"
           price='$1094.99 Plus S&H'
           show={showcase[3]}
+          pageUrl={'/products/petstructures/61575d9930e7eba3665b5ca5'}
         />
         <ShowcaseProduct
           image='/public/images/PBChickBarn812175.png'
           title='Chicken Barn Wagon on Wheels'
           price='$4,595.99 Plus S&H '
           show={showcase[4]}
+          pageUrl={'/products/petstructures/615b48e2d66d9c38dcf5e776'}
         />
         <ShowcaseProduct
           image='/public/images/CWHoppers2175.png'
           title='Self Dumping Hoppers'
           show={showcase[5]}
+          pageUrl={'/products/industrialequipment/61606dd4d66d9c38dcf5e7b5'}
         />
         <ShowcaseProduct
           image='/public/images/ChickenWagononwheels175.png'
           title='Chicken Barn House on Wheels'
-          price='$4,795.99 Plus S&H '
+          price='$6,795.99 excludes shipping'
           show={showcase[6]}
+          pageUrl={'/products/petstructures/615b47acd66d9c38dcf5e775'}
         />
         <ShowcaseProduct
           image='/public/images/happyhideout1751.png'
           title='Happy Hideout Swingset'
           price='$4,000.00'
           show={showcase[7]}
+          pageUrl={'/products/swingsets/615f6354d66d9c38dcf5e7b0'}
         />
       </div>
+      {/* <div class='home__circles'>
+        {showcase.map((item) => (
+          <div className='circle'></div>
+        ))}
+      </div> */}
       <div className='home__services'>
         <a
           className='services__servicebox'
