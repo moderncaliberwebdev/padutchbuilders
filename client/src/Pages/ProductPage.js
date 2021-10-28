@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Helmet } from 'react-helmet'
 
 import '../css/ProductPage.css'
 
@@ -21,6 +22,9 @@ function ProductPage({ match }) {
 
   return (
     <div className='productpage'>
+      <Helmet>
+        <title>{product.title}</title>
+      </Helmet>
       <Header />
       <h1 className='productpage__title'>{product.title}</h1>
       <div className='productpage__image-container'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Helmet } from 'react-helmet'
 
 import '../css/Contact.css'
 
@@ -38,6 +39,9 @@ function Contact() {
   }
   return (
     <div className='contact'>
+      <Helmet>
+        <title>Contact Info</title>
+      </Helmet>
       <Header />
       <h1 className='contact__title'>
         Sales at PA Dutch Builders<p className='contact__r'>®</p>, LLC

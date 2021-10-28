@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import '../css/Catalogs.css'
 
@@ -9,6 +10,9 @@ import CatalogItem from '../Components/CatalogItem'
 function Catalogs() {
   return (
     <div className='catalogs'>
+      <Helmet>
+        <title>Catalogs</title>
+      </Helmet>
       <Header />
 
       <h1 className='catalogs__title'>Virtual Catalogs</h1>

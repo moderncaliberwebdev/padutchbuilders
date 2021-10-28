@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import '../css/WhoWeAre.css'
 
@@ -9,6 +10,9 @@ function WhoWeAre() {
   const Year = new Date().getFullYear()
   return (
     <div className='whoweare'>
+      <Helmet>
+        <title>Who We Are</title>
+      </Helmet>
       <Header />
       <div className='whoweare__body'>
         <h2 className='body__title'>Who We Are</h2>

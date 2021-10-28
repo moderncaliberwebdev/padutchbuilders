@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Helmet } from 'react-helmet'
 
 import '../css/ProductList.css'
 
@@ -20,6 +21,9 @@ function ProductList({ title, subtitle, prodType }) {
 
   return (
     <div className='productlist'>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <Header />
       <h1 className='productlist__title'>{title}</h1>
       {subtitle && <span className='productlist__subtitle'>{subtitle}</span>}

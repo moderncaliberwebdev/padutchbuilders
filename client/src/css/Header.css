@@ -47,6 +47,7 @@
     z-index: 1500;
     overflow-x: hidden;
     flex-direction: column;
+    padding-top: 4rem;
   }
 }
 
@@ -71,7 +72,6 @@
   }
 
   .first {
-    padding-top: 8rem !important;
     height: 15rem;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
@@ -6,6 +7,9 @@ import Footer from '../Components/Footer'
 function WhatWeDo() {
   return (
     <div className='whoweare'>
+      <Helmet>
+        <title>What We Do</title>
+      </Helmet>
       <Header />
       <div className='whoweare__body'>
         <h2 className='body__title'>What We Do</h2>

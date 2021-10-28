@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import '../css/Home.css'
 
@@ -71,6 +72,9 @@ function Home() {
 
   return (
     <div className='home'>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Header />
       <img
         src='/public/images/banner.png'

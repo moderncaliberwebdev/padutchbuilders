@@ -19,6 +19,10 @@
     height: auto !important;
     z-index: 100;
 }
+
+.react-pdf__Page__textContent {
+    display: none !important;
+}
 @media only screen and (max-width: 750px) {
     .react-pdf__Page__canvas {
         width: 45rem !important;
@@ -48,6 +52,15 @@
     width: 20rem;
     margin: -10rem auto;
     z-index: 999;
+}
+
+@media only screen and (max-width: 600px) {
+    .catalogpage__pages {
+        width: 30rem;
+        font-size: 2rem;
+        margin: -13rem auto;
+        padding: 2rem;
+    }
 }
 
 .catalogpage__pages:hover {

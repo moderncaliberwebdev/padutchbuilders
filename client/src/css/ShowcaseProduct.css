@@ -35,6 +35,13 @@
     align-self: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .showcaseproduct__info-cont {
+        margin: .5rem;
+        align-self: center;
+    }
+}
+
 .showcaseproduct__info-cont a {
     text-decoration: none;
 }

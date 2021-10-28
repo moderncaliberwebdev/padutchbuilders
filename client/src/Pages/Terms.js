@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import '../css/Terms.css'
 
@@ -8,6 +9,9 @@ import Footer from '../Components/Footer'
 function Terms() {
   return (
     <div className='whoweare'>
+      <Helmet>
+        <title>Terms and Conditions</title>
+      </Helmet>
       <Header />
       <div className='whoweare__body'>
         <h2 className='body__title'>Terms and Conditions</h2>
