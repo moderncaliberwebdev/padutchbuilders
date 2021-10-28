@@ -14,6 +14,7 @@
      height: 40rem;
      justify-content: center;
      margin: auto 2rem;
+     border: 1px solid #444f66;
     }
 
     .showcaseproduct:nth-of-type(2) {
@@ -30,7 +31,7 @@
 }
 
 .showcaseproduct__info-cont {
-    margin-left: 1rem;
+    margin-left: 5rem;
     align-self: center;
 }
 
@@ -65,5 +66,10 @@
 .showcaseproduct__readmore {
     float: left;
     cursor: pointer;
-    color: #444F66;
+    background-color: #444F66;
+    color: #fff;
+    margin-top: .5rem;
+    padding: .5rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
 }

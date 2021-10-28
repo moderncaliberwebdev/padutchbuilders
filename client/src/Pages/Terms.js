@@ -11,7 +11,7 @@ function Terms() {
       <Header />
       <div className='whoweare__body'>
         <h2 className='body__title'>Terms and Conditions</h2>
-        <span className='body__date'>10 May 2012</span>
+        <span className='body__date'></span>
         <h3 className='terms__heading'>Privacy Policy</h3>
         <p className='body__text'>
           We are fully committed to protecting your privacy. When you place an

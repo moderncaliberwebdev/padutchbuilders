@@ -48,6 +48,8 @@ function ProductList({ title, subtitle, prodType }) {
                   'industrialequipment'
             }/${product._id}`}
             key={product.title}
+            brochure={product.brochure}
+            video={product.video}
           />
         ))}
       </div>

@@ -272,12 +272,9 @@ function Home() {
         >
           <img
             className='servicebox__img'
-            src='/public/images/contract.png'
+            src='/public/images/contractor_banner.png'
             alt='Contract'
           />
-          <h4 className='servicebox__title'>
-            Post Your Contracting Job for Bids
-          </h4>
         </a>
         <a
           className='services__servicebox'
@@ -288,15 +285,13 @@ function Home() {
             src='/public/images/auction.png'
             alt='Auctions'
           />
-          <h4 className='servicebox__title'>Visit Our PA Dutch Auctions</h4>
         </a>
         <a className='services__servicebox' href='/catalogs'>
           <img
             className='servicebox__img'
-            src='/public/images/catalog.png'
+            src='/public/images/catalog_banner.png'
             alt='Catalog'
           />
-          <h4 className='servicebox__title'>See Our Virtual Catalogs</h4>
         </a>
         <a
           className='services__servicebox'
@@ -308,12 +303,9 @@ function Home() {
         >
           <img
             className='servicebox__img'
-            src='/public/images/calendar.png'
+            src='/public/images/tour_banner.png'
             alt='Calendar'
           />
-          <h4 className='servicebox__title'>
-            Schedule a Tour of a PA Dutch Farm
-          </h4>
         </a>
       </div>
       <div className='interested__cont'>

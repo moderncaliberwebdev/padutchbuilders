@@ -45,8 +45,6 @@ function CatalogPage({ title, pdf }) {
         </span>
       </div>
 
-      <Footer marginBottom={-20} />
-
       <a href={pdf} download='catalog.pdf' className='catalogpage__download'>
         <img
           src='/public/images/pdf.png'
@@ -57,6 +55,7 @@ function CatalogPage({ title, pdf }) {
           Click to download this catalog to your desktop
         </p>
       </a>
+      <Footer marginBottom={-20} />
     </div>
   )
 }

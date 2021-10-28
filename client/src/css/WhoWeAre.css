@@ -8,6 +8,7 @@
     padding: 2rem;
     margin: 5rem auto;
     display: block;
+    border: 1px solid #444f66;
 }    
 @media only screen and (max-width: 600px) {
     .whoweare__body {

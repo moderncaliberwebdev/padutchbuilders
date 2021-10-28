@@ -18,6 +18,9 @@
     padding: 1rem;
     font-size: 1.4rem;
 }
+.subtitle__a {
+    color: #fff;
+}
 
 .productlist__container {
     display: flex;

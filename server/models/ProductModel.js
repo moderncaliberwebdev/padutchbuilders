@@ -25,6 +25,14 @@ const productModelSchema = mongoose.Schema({
     type: Boolean,
     required: false,
   },
+  brochure: {
+    type: String,
+    required: false,
+  },
+  video: {
+    type: String,
+    required: false,
+  },
 })
 
 const Product = mongoose.model('Product', productModelSchema)

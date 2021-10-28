@@ -133,9 +133,12 @@ function App() {
         <Route path='/roofing' exact>
           <ProductList
             title={'Roofing, Siding, and Amish Contractors'}
-            subtitle={
-              'If you want to post your project for estimates or bids. - Visit PaDutchContractors.com'
-            }
+            subtitle={[
+              'If you want to post your project for estimates or bids. - Visit ',
+              <a href='https://padutchcontractors.com' className='subtitle__a'>
+                PaDutchContractors.com
+              </a>,
+            ]}
             prodType={'Roofing'}
           />
         </Route>

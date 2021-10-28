@@ -9,7 +9,7 @@ function WhatWeDo() {
       <Header />
       <div className='whoweare__body'>
         <h2 className='body__title'>What We Do</h2>
-        <span className='body__date'>08 February 2011</span>
+        <span className='body__date'></span>
         <p className='body__text'>
           We are dedicated in bringing to you some of the hardest working
           craftsmen in the USA. Whether your looking for a small shed or a large

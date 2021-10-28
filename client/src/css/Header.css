@@ -20,6 +20,12 @@
   width: 12rem;
   margin-top: -3rem;
 }
+.home__amishman {
+  float: right;
+  position: relative;
+  width: 12rem;
+  margin: -1rem 0 1rem 0;
+}
 
 .home__nav {
   position: relative;

@@ -1,11 +1,11 @@
 .catalogitem {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     margin: 1rem;
     padding: 2rem;
     border-radius: 10px;
     text-decoration: none;
     width: 20rem;
+    border: 1px solid #444f66;
 }
 
 .catalogitem__title {

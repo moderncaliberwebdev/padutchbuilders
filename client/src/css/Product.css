@@ -4,12 +4,12 @@
     margin: 3rem 1rem;
     padding: 3rem 1rem;
     background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
     width: 25rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid #444f66;
 }
 
 .product__image-wrapper, .product__title a, .product__readmore-wrapper {
@@ -24,10 +24,15 @@
 }
 
 .product__readmore {
-    text-align: left;
-    width: 20rem;
-    margin: 0 auto;
+    text-align: center;
+    width: 12rem;
+    margin: .5rem auto;
     cursor: pointer;
+    background-color: #444F66;
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
 }
 
 .product__title {
@@ -41,9 +46,34 @@
     font-weight: 600;
 }
 
+.product__interested-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
 .product__interested {
-    margin: .5rem 0 1rem 0;
+    margin: 0;
     font-size: 1.4rem;
+}
+
+.brochure__bar {
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+
+.brochure__button {
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #444f66;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .product__sales {
@@ -52,7 +82,7 @@
     padding: .5rem 2rem;
     font-size: 1.6rem;
     width: 15rem;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     border-style: none;
     cursor: pointer;
 }
