@@ -282,11 +282,11 @@ function Home() {
         </a>
         <a
           className='services__servicebox'
-          href='http://www.padutchauctions.com/'
+          href='http://www.oldamishremedies.com/'
         >
           <img
             className='servicebox__img'
-            src='/public/images/auction.png'
+            src='/public/images/oldamish.png'
             alt='Auctions'
           />
         </a>

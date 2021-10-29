@@ -1,22 +1,22 @@
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
 
 import '../css/Header.css'
 
 function Header() {
-  const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
   return (
     <>
       <a href='/'>
         <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
       </a>
-      {!isMobile && (
+      <div className='home__amishman'>
         <img
-          src='/public/images/amishman.png'
+          src='/public/images/header_amishman.png'
           alt='Dealers Welcome'
-          className='home__amishman'
+          className='amishman__image'
         />
-      )}
+        <span className='amishman__number'>717-488-8005</span>
+        <span className='amishman__dealers'>• DEALERS WELCOME •</span>
+      </div>
       <img
         src='/public/images/menu.png'
         alt='Menu'
