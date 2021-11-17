@@ -33,7 +33,7 @@ function WhoWeAre() {
           Thank you for your interest in PA Dutch Builders ®, LLC.
         </span>
       </div>
-      <Footer marginBottom={0} />
+      <Footer marginBottom={-5} />
     </div>
   )
 }

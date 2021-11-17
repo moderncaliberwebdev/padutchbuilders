@@ -16,7 +16,10 @@ function Footer({ marginBottom }) {
       </span>
       <span className='footer__text'>
         PA Dutch Builders<p className='footer__r'>®</p> is a registered mark of
-        the US patent and trademark office, all rights reserved.
+        the US patent and trademark office,
+      </span>
+      <span className='footer__text'>
+       all rights reserved.
       </span>
     </footer>
   )

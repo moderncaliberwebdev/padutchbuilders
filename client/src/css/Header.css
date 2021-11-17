@@ -43,8 +43,8 @@
   margin: 0 auto;
 }
 .amishman__number {
-  font-size: 2rem;
-  font-family: 'Open Sans', sans-serif;
+  width: 15rem;
+  margin: 0 auto;
 }
 .amishman__dealers {
   font-size: 1.4rem;;

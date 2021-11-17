@@ -73,7 +73,7 @@
   }
 }
 
-.info__title {
+.productinfo__title {
   font-size: 2rem;
   font-weight: 600;
   color: #444f66;
@@ -88,7 +88,7 @@
   font-size: 1.4rem;
 }
 
-.info__sales {
+.productinfo__sales {
   color: #fff;
   background-color: #d12f34;
   padding: .5rem 2rem;

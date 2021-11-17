@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import YoutubeEmbed from './YoutubeEmbed'
 
 import '../css/Product.css'
 
@@ -11,6 +13,12 @@ function Product({ image, title, price, link, brochure, video }) {
     Swingset: '/catalogs/swingset',
     Playground: '/catalogs/playground',
     Horsestall: '/catalogs/horsestall',
+  }
+
+  const [displayYT, setDisplayYT] = useState(false)
+
+  const setDisplayProp = (bool) => {
+    setDisplayYT(bool)
   }
 
   return (
@@ -36,12 +44,15 @@ function Product({ image, title, price, link, brochure, video }) {
           </div>
         )}
         {video && (
-          <div className='product__brochure'>
-            <span className='brochure__bar'>|</span>
-            <a className='brochure__button' href={video} target='_blank'>
-              View Video
-            </a>
-          </div>
+          <>
+            <div className='product__brochure'>
+              <span className='brochure__bar'>|</span>
+              <a className='brochure__button'  target='_blank' onClick={() => setDisplayProp(true)}>
+                View Video
+              </a>
+            </div>
+              <YoutubeEmbed embedId='c08uR0bPQlM' display={displayYT} setDisplayProp={setDisplayProp}/>
+          </>
         )}
       </div>
       <button

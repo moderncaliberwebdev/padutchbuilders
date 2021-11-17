@@ -3,9 +3,9 @@
     position: relative;
 }
 .whoweare__body {
-    width: 60rem;
+    width: 70rem;
     background-color: #fff;
-    padding: 2rem;
+    padding: 3rem;
     margin: 5rem auto;
     display: block;
     border: 1px solid #444f66;
@@ -16,7 +16,7 @@
     }
 }
 .body__title {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     font-weight: 100;
     color: #444f66;
 }
@@ -34,7 +34,7 @@
     text-align: left;
     width: 100%;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 @media only screen and (max-width: 600px) {
     .body__date {
@@ -44,10 +44,10 @@
 
 .body__text {
     color: #444f66;
-    line-height: 1.5rem;
+    line-height: 2rem;
     text-indent: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    margin: 2rem 0;
+    font-size: 1.6rem;
 }
 @media only screen and (max-width: 600px) {
     .body__text {

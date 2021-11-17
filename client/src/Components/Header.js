@@ -14,7 +14,8 @@ function Header() {
           alt='Dealers Welcome'
           className='amishman__image'
         />
-        <span className='amishman__number'>717-488-8005</span>
+        <img src="/public/images/number.png" alt="Phone Number" className="amishman__number"/>
+        {/* <span className='amishman__number'>717-488-8005</span> */}
         <span className='amishman__dealers'>• DEALERS WELCOME •</span>
       </div>
       <img

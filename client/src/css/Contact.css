@@ -23,24 +23,24 @@
  border-radius: 10px;
  display: flex;
  flex-direction: column;
- padding: 2rem 4rem;
+ padding: 2rem 6rem;
  border: 1px solid #444f66;
 }
 
 .box__item {
     display: flex;
-    margin: .5rem 0;
+    margin: 2rem 0;
 }
 
 .box__item-img {
-   width: 3rem;
-   height: 3rem;
+   width: 4rem;
+   height: 4rem;
 }
 
 .box__item-text {
     color: #444f66;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
     padding: .5rem 1rem;
 }
 

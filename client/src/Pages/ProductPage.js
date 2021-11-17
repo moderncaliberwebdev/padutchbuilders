@@ -289,10 +289,10 @@ function ProductPage({ match }) {
           ))}
       </div>
       <div className='productpage__info'>
-        <h2 className='info__title'>Get More Info</h2>
+        <h2 className='productinfo__title'>Get More Info</h2>
         <span className='info__span'>Telephone us at: (717) 488-8005</span>
         <button
-          className='info__sales'
+          className='productinfo__sales'
           onClick={() =>
             (window.location.href = 'mailto:sales@padutchbuilders.com')
           }

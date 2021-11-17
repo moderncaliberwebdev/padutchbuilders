@@ -8,8 +8,10 @@
  left: 0;
  padding: 4rem;
  text-align: center;
- font-size: 1.4rem;
+ font-size: 2rem;
  color: #fff;
+ display: flex;
+ flex-direction: column;
  
 }
 
