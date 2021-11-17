@@ -27,6 +27,12 @@
     width: 30rem;
 }
 
+@media only screen and (max-width: 600px) {
+    .showcaseproduct__img-cont {
+        width: 20rem;
+    }
+}
+
 .showcaseproduct__img {
     width: 100%;
     height: auto;

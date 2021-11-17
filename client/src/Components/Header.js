@@ -4,7 +4,7 @@ import '../css/Header.css'
 
 function Header() {
   return (
-    <>
+    <div className="bodyHeader">
       <a href='/'>
         <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
       </a>
@@ -103,7 +103,7 @@ function Header() {
           </a>
         </span>
       </nav>
-    </>
+    </div>
   )
 }
 
