@@ -53,7 +53,7 @@ function WhatWeDo() {
           email today and we won't let you down.
         </p>
       </div>
-      <Footer marginLeft={0} marginBottom={-20} />
+      <Footer marginLeft={0} marginBottom={-25} />
     </div>
   )
 }

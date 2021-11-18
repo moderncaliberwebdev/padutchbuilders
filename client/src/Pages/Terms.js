@@ -8,7 +8,9 @@ import Footer from '../Components/Footer'
 
 function Terms() {
   return (
-    <div className='whoweare'>
+    <div className="fullpage">
+
+    <div className='whoweare content'>
       <Helmet>
         <title>Terms and Conditions</title>
       </Helmet>
@@ -322,7 +324,8 @@ function Terms() {
           by customer.
         </p>
       </div>
-      <Footer marginLeft={0} marginBottom={-20} />
+    </div>
+      <Footer marginLeft={0} marginBottom={-25} />
     </div>
   )
 }

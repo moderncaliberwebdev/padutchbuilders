@@ -38,7 +38,9 @@ function Contact() {
     }
   }
   return (
-    <div className='contact'>
+    <div className="fullpage">
+
+    <div className='contact content'>
       <Helmet>
         <title>Contact Info</title>
       </Helmet>
@@ -142,7 +144,8 @@ function Contact() {
           <p id='contact__form-res'></p>
         </div>
       </div>
-      <Footer marginLeft={0} marginBottom={-20} />
+    </div>
+      <Footer marginLeft={0} marginBottom={-25} />
     </div>
   )
 }

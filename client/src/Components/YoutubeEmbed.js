@@ -3,8 +3,18 @@ import PropTypes from "prop-types";
 
 import '../css/YoutubeEmbed.css'
 
-const YoutubeEmbed = ({ embedId, display, setDisplayProp }) => (
-    <div className="video-container" style={{display: display == false ? 'none' : 'block'}} onClick={() => setDisplayProp(false)}>
+const YoutubeEmbed = ({ embedId, display, setDisplayProp }) => {
+  const closeVideo = () => {
+    setDisplayProp(false)
+    // const videos = document.querySelectorAll('video')
+    const iframes = document.querySelectorAll( 'iframe');
+    iframes.forEach((iframe) => {
+      const iframeSrc = iframe.src
+      iframe.src = iframeSrc
+    })
+  }
+  return (
+    <div className="video-container" style={{display: display == false ? 'none' : 'block'}} onClick={() => closeVideo()}>
 
   <div className="video-responsive">
     <iframe
@@ -16,10 +26,10 @@ const YoutubeEmbed = ({ embedId, display, setDisplayProp }) => (
       allowFullScreen
       title="Embedded youtube"
     />
-    <span className='video-close' onClick={() => setDisplayProp(false)}>X</span>
+    <span className='video-close' onClick={() => closeVideo()}>X</span>
   </div>
     </div>
-);
+)};
 
 YoutubeEmbed.propTypes = {
   embedId: PropTypes.string.isRequired

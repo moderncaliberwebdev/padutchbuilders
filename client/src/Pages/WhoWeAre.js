@@ -9,7 +9,9 @@ import Footer from '../Components/Footer'
 function WhoWeAre() {
   const Year = new Date().getFullYear()
   return (
-    <div className='whoweare'>
+    <div className='fullpage'>
+
+    <div className='whoweare content'>
       <Helmet>
         <title>Who We Are</title>
       </Helmet>
@@ -33,7 +35,8 @@ function WhoWeAre() {
           Thank you for your interest in PA Dutch Builders ®, LLC.
         </span>
       </div>
-      <Footer marginBottom={-5} />
+    </div>
+      <Footer marginBottom={-15} />
     </div>
   )
 }

@@ -20,7 +20,9 @@ function ProductList({ title, subtitle, prodType }) {
   }, [])
 
   return (
-    <div className='productlist'>
+    <div className="fullpage">
+
+    <div className='productlist content'>
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -57,6 +59,7 @@ function ProductList({ title, subtitle, prodType }) {
           />
         ))}
       </div>
+    </div>
       <Footer marginLeft={0} marginBottom={-20} />
     </div>
   )

@@ -393,7 +393,7 @@ function Home() {
           ...let our connection be your connection!
         </h2>
       </div>
-      <Footer marginBottom={-20} />
+      <Footer marginBottom={-25} />
     </div>
   )
 }
