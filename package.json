@@ -8,6 +8,7 @@
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
+    "express-http-to-https": "^1.1.4",
     "mongoose": "^5.11.11",
     "nodemailer": "^6.6.5",
     "nodemailer-mailgun-transport": "^2.1.3",

@@ -2,6 +2,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
+import expresshttp from 'express-http-to-https'
 
 // DB
 import connectDB from './config/db.js'
@@ -15,6 +16,9 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 dotenv.config()
 connectDB()
+
+const redirectToHTTPS = expresshttp.redirectToHTTPS
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301))
 
 app.use('/api', routes)
 
