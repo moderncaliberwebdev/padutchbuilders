@@ -3,6 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
 import expresshttp from 'express-http-to-https'
+import nakedredirect from 'express-naked-redirect'
 
 // DB
 import connectDB from './config/db.js'
@@ -16,6 +17,9 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 dotenv.config()
 connectDB()
+
+//URL Settings - redirect non-www to www and http to https
+app.use(nakedredirect())
 
 const redirectToHTTPS = expresshttp.redirectToHTTPS
 app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301))
