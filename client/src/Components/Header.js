@@ -4,29 +4,76 @@ import '../css/Header.css'
 
 function Header() {
   return (
-    <div className="bodyHeader">
-      <a href='/'>
-        <img src='/public/images/logo.png' alt='Logo' className='home__logo' />
-      </a>
-      <div className='home__amishman'>
+    <div className='bodyHeader'>
+      <div className='home__headertop'>
+        <a href='/'>
+          <img
+            src='/public/images/logo.png'
+            alt='Logo'
+            className='home__logo'
+          />
+        </a>
+        <div className='home__amishphotos'>
+          <img
+            src='/public/images/header/amish-builder.png'
+            alt='Amish Post'
+            className='amishphotos__item size7'
+          />
+          <img
+            src='/public/images/header/amish-carrying.png'
+            alt='Amish Post'
+            className='amishphotos__item size6'
+          />
+          <img
+            src='/public/images/header/amish-construction.png'
+            alt='Amish Post'
+            className='amishphotos__item size5'
+          />
+          <img
+            src='/public/images/header/amish-ladder.png'
+            alt='Amish Post'
+            className='amishphotos__item size4'
+          />
+          <img
+            src='/public/images/header/amish-measure.png'
+            alt='Amish Post'
+            className='amishphotos__item size3'
+          />
+          <img
+            src='/public/images/header/amish-post.png'
+            alt='Amish Post'
+            className='amishphotos__item size2'
+          />
+          <img
+            src='/public/images/header/amish-roofing.png'
+            alt='Amish Post'
+            className='amishphotos__item size1'
+          />
+        </div>
+        <div className='home__amishman'>
+          <img
+            src='/public/images/header_amishman.png'
+            alt='Dealers Welcome'
+            className='amishman__image'
+          />
+          <img
+            src='/public/images/number.png'
+            alt='Phone Number'
+            className='amishman__number'
+          />
+          {/* <span className='amishman__number'>717-488-8005</span> */}
+          <span className='amishman__dealers'>• DEALERS WELCOME •</span>
+        </div>
         <img
-          src='/public/images/header_amishman.png'
-          alt='Dealers Welcome'
-          className='amishman__image'
+          src='/public/images/menu.png'
+          alt='Menu'
+          className='home__menu'
+          onClick={() => {
+            document.querySelector('.home__nav-menu').style.display = 'block'
+            document.querySelector('.home__nav').style.width = '100vw'
+          }}
         />
-        <img src="/public/images/number.png" alt="Phone Number" className="amishman__number"/>
-        {/* <span className='amishman__number'>717-488-8005</span> */}
-        <span className='amishman__dealers'>• DEALERS WELCOME •</span>
       </div>
-      <img
-        src='/public/images/menu.png'
-        alt='Menu'
-        className='home__menu'
-        onClick={() => {
-          document.querySelector('.home__nav-menu').style.display = 'block'
-          document.querySelector('.home__nav').style.width = '100vw'
-        }}
-      />
       <nav className='home__nav'>
         <img
           src='/public/images/menu-white.png'
