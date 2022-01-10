@@ -1,13 +1,15 @@
-
 .home {
   min-height: 100vh;
   position: relative;
 }
 
 .home__menu {
+  height: 6rem;
   width: 6rem;
-  float: right;
-  margin-top: 1rem;
+  position: fixed;
+  top: 4rem;
+  right: 5rem;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -23,14 +25,13 @@
 
 .home-wrapper {
   width: 100vw;
-  background-color: #fff;
   margin-left: -5rem;
+  margin-top: -2px;
 }
 
 .home__hat-container {
-  width: 100rem;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -42,18 +43,25 @@
   }
 }
 
-.hat {
-  width: 20rem;
-  margin: 1rem 2rem;
-  cursor: pointer;
-  transition: all 0.2s;
+.home__hat-container a {
+  width: 25%;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(228, 228, 228);
 }
 @media only screen and (max-width: 600px) {
-  .hat {
-    width: 13rem;
+  .home__hat-container a {
+    width: 50%;
+    padding: 2rem 6rem;
   }
 }
 
+.hat {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 .hat:hover {
   transform: scale(1.1);
 }
@@ -136,7 +144,6 @@
   }
 }
 
-
 .services__servicebox {
   background-color: #fff;
   height: 15rem;
@@ -147,19 +154,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .services__servicebox  {
+  .services__servicebox {
     height: 20rem;
     margin: 3rem;
   }
 }
-
 
 .services__servicebox:hover {
   transform: scale(1.1);
 }
 
 .servicebox__img {
- height: 100%;
+  height: 100%;
 }
 
 .servicebox__title {
@@ -173,7 +179,6 @@
     text-align: center;
   }
 }
-
 
 .interested__cont {
   background-color: #fff;
@@ -225,7 +230,7 @@
 @media only screen and (max-width: 600px) {
   .interested__number {
     font-size: 2rem;
-    margin: 2rem .5rem 2rem 0 ;
+    margin: 2rem 0.5rem 2rem 0;
   }
 }
 
@@ -236,7 +241,7 @@
 @media only screen and (max-width: 600px) {
   .interested__or {
     font-size: 2rem;
-    margin: 2rem .5rem 2rem 0 ;
+    margin: 2rem 0.5rem 2rem 0;
   }
 }
 
@@ -246,9 +251,9 @@
   font-size: 1.4rem;
 }
 @media only screen and (max-width: 600px) {
- .interested__email {
+  .interested__email {
     font-size: 2rem;
-    margin: 2rem 0 ;
+    margin: 2rem 0;
   }
 }
 
@@ -269,7 +274,7 @@
   .aboutamish__title {
     font-size: 3rem;
   }
- }
+}
 
 .aboutamish__subtitle {
   padding: 1rem;
@@ -282,7 +287,7 @@
   .aboutamish__subtitle {
     font-size: 2rem;
   }
- }
+}
 
 .aboutamish__para {
   margin: 2rem 0;
@@ -294,7 +299,7 @@
     font-size: 2rem;
     line-height: 2.2rem;
   }
- }
+}
 
 .aboutamish__banner {
   display: block;
