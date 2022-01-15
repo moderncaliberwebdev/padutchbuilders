@@ -6,9 +6,9 @@
 .home__menu {
   height: 6rem;
   width: 6rem;
-  position: fixed;
-  top: 4rem;
-  right: 5rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
   text-align: center;
   cursor: pointer;
 }
