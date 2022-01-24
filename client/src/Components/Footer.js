@@ -12,15 +12,13 @@ function Footer({ marginBottom }) {
     >
       <span className='footer__text'>
         © 2021 PA Dutch Builders<p className='footer__r'>®</p>, LLC | hosted by
-        Destefano Enterprises, LLC
+        De Stefano Enterprises, LLC
       </span>
       <span className='footer__text'>
         PA Dutch Builders<p className='footer__r'>®</p> is a registered mark of
         the US patent and trademark office,
       </span>
-      <span className='footer__text'>
-       all rights reserved.
-      </span>
+      <span className='footer__text'>all rights reserved.</span>
     </footer>
   )
 }
