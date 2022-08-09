@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-  RewriteCond %{HTTP_HOST} ^yourdomain.com [NC] RewriteRule ^(.*)$
-  http://www.yourdomain.com/$1 [L,R=301] RedirectMatch 301
+  RewriteCond %{HTTP_HOST} ^padutchbuilders.com [NC] RewriteRule ^(.*)$
+  http://www.padutchbuilders.com/$1 [L,R=301] RedirectMatch 301
   https://wwww.padutchbuilders.com/home https://www.padutchbuilders.com
 </IfModule>
