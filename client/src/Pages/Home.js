@@ -73,7 +73,7 @@ function Home() {
   return (
     <div className='home'>
       <Helmet>
-        <title>Home</title>
+        <title>Home - PA Dutch Builders | Amish Builders</title>
       </Helmet>
       <Header />
       <img
