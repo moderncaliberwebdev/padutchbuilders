@@ -16,17 +16,9 @@ import Catalogs from '../Pages/Catalogs'
 import CatalogPage from '../Pages/CatalogPage'
 import ProductList from '../Pages/ProductList'
 import ProductPage from '../Pages/ProductPage'
+import Error from '../Pages/Error'
 
 function App() {
-  // const dispatch = useDispatch()
-
-  // const action = useSelector((state) => state.action)
-  // const { title } = action
-
-  // useEffect(() => {
-  //   dispatch(actions())
-  // }, [dispatch])
-
   return (
     <Router>
       <Switch>
@@ -188,6 +180,7 @@ function App() {
           />
         </Route>
         <Route path='/' component={Home} exact />
+        <Route component={Error} />
       </Switch>
     </Router>
   )
