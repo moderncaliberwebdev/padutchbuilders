@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTPS} off RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-  [L,R=301] RewriteCond %{HTTP_HOST} !^www\. [NC] RewriteRule (.*)
-  https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301] RedirectMatch 301
-  https://padutchbuilders.com/home https://www.padutchbuilders.com RedirectMatch
-  301 https://wwww.padutchbuilders.com/home https://www.padutchbuilders.com
-</IfModule>
