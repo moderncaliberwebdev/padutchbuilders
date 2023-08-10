@@ -1,18 +1,9 @@
-import nodemailer from 'nodemailer'
-import mailGun from 'nodemailer-mailgun-transport'
+import sgMail from '@sendgrid/mail'
 import validator from 'validator'
 import dotenv from 'dotenv'
 
 dotenv.config()
-
-const auth = {
-  auth: {
-    api_key: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_API_DOMAIN,
-  },
-}
-
-const transporter = nodemailer.createTransport(mailGun(auth))
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export const mailTo = (name, email, subject, message, callback) => {
   //validation
@@ -21,25 +12,35 @@ export const mailTo = (name, email, subject, message, callback) => {
   } else if (!validator.isEmail(email)) {
     return callback('Provide a valid email', undefined)
   } else {
-    const output = `
-                <h3>Name:</h3> ${name}
-                <h3>Email:</h3> ${email}
-                <h3>Subject:</h3> ${subject}
-                <h3>Message:</h3> ${message}
-            `
-    const mailOptions = {
-      from: email,
+    const msg = {
       to: 'sales@padutchbuilders.com',
-      subject: 'PA Dutch Builders Contact Request',
-      html: output,
+      from: {
+        name: 'PA Dutch Builders Contact',
+        email: 'cmartin@moderncaliber.com',
+      },
+      templateId: 'd-99ebf78af1de49428f2dd8918d7f7b5a',
+      dynamic_template_data: {
+        name,
+        email,
+        subject,
+        message,
+      },
     }
-    transporter.sendMail(mailOptions, (err, data) => {
-      if (err) {
-        callback('Internal Error', undefined)
-      } else {
-        callback(undefined, data)
+    //ES8
+    const sendSGMail = async () => {
+      try {
+        await sgMail.send(msg)
+
+        callback(undefined, { sent: true })
+      } catch (error) {
+        console.error(error)
+
+        if (error.response) {
+          console.error(error.response.body)
+        }
       }
-    })
+    }
+    sendSGMail()
   }
 }
 
