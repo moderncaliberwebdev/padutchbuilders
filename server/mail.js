@@ -18,6 +18,7 @@ export const mailTo = (name, email, subject, message, callback) => {
         name: 'PA Dutch Builders Contact',
         email: 'cmartin@moderncaliber.com',
       },
+      replyTo: email,
       templateId: 'd-99ebf78af1de49428f2dd8918d7f7b5a',
       dynamic_template_data: {
         name,
